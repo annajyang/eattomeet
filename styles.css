@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face{
+    font-family: 'Noto Sans';
+    src:url("fonts/NotoSans-VariableFont_wdth,wght.ttf");
+}
+@font-face{
+    font-family: 'Yuji Syuku';
+    src:url("fonts/YujiSyuku-Regular.ttf");
+}
 
 *,  *::before,  *::after {
     box-sizing: content-box;
@@ -8,7 +15,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: #3E342D;
-    font-family: Noto Sans, sans-serif;
+    font-family: "Noto Sans", sans-serif;
     font-size: 1.2rem;
     color: #FFFFFF;
     min-height: 100vh;
@@ -69,4 +76,20 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
+}
+
+.btn {
+    color: #FFF;
+    background-color: #CA3636;
+    padding: .75rem 1.5rem;
+    border-radius: .7rem;
+    text-decoration: none;
+    text-align: center;
+    -webkit-text-stroke-width: 4;
+    -webkit-text-stroke-color: #FFF;
+    font-family: "Noto Sans";
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }

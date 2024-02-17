@@ -1,0 +1,19 @@
+.home-main-section {
+    align-items: stretch;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+
+
+.main-logo {
+    color: #FFF;
+    text-align: center;
+    -webkit-text-stroke-width: 6;
+    -webkit-text-stroke-color: #FFF;
+    font-family: "Yuji Syuku";
+    font-size: 150px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
