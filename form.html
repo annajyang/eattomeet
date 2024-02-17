@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EATtoMEET Sign Up Form</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="form_styles.css">
 </head>
 <body>
 <div class="navbar">
@@ -19,11 +19,16 @@
 <div class="form-container">
     <form action="/submit-form" method="POST">
         <h2>SIGN UP</h2>
-        <input type="text" name="preferred_name" placeholder="PREFERRED NAME">
-        <input type="number" name="age" placeholder="AGE">
-        <input type="text" name="city_of_residence" placeholder="CITY OF RESIDENCE">
-        <input type="text" name="food_preferences" placeholder="3 FOOD PREFERENCES">
-        <input type="text" name="interests" placeholder="3 INTERESTS">
+        <input type="text" id="preferred_name" name="preferred_name" placeholder="PREFERRED NAME">
+        
+        <input type="number" id="age" name="age" placeholder="AGE">
+        
+        <input type="text" id="city_of_residence" name="city_of_residence" placeholder="CITY OF RESIDENCE">
+        
+        <input type="text" id="food_preferences" name="food_preferences" placeholder="3 FOOD PREFERENCES">
+        
+        <input type="text" id="interests" name="interests" placeholder="3 INTERESTS">
+        
         <button type="submit">SUBMIT</button>
     </form>
     <p class="signin-link">ALREADY HAVE AN ACCOUNT? <a href="#">CLICK HERE!</a></p>

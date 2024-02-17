@@ -9,6 +9,8 @@
 
 *,  *::before,  *::after {
     box-sizing: content-box;
+    max-width:100%;
+    overflow-x: scroll;
 }
 
 body {
@@ -18,16 +20,22 @@ body {
     font-family: "Noto Sans", sans-serif;
     font-size: 1.2rem;
     color: #FFFFFF;
-    min-height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
-.full-height-grow {
-    display: flex;
-    flex-direction: column;
+header {
+    background: #907A6B;
+    mix-blend-mode: plus-darker;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .full-size-img {
     background: url("imgs/homebackground.svg"), lightgray 50% / cover no-repeat;
+    mix-blend-mode: darken;
     backdrop-filter: blur(2px);
     background-position: center;
     height: 100vh;
@@ -67,9 +75,6 @@ body {
     align-items: center;
     height: 140px;
     color: inherit;
-    mix-blend-mode: plus-darker;
-    background: #030303;
-    opacity: .8;
 }
 
 .container {
