@@ -60,8 +60,12 @@ form input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #f9feff;
     border-radius: 4px;
+    font-weight: 550;
+}
+form input:hover {
+    background-color:rgb(243, 243, 243);
 }
 
 .logo {
@@ -76,21 +80,29 @@ form button {
     margin: 10px 0;
     border: none;
     border-radius: 4px;
-    background-color: #d9534f;
+    background-color: #a00500;
+    font-weight: bold;
     color: white;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color: #c9302c;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    background-color: #c20600;
 }
 
 .signin-link {
+    font-family: 'Noto Sans', sans-serif;
+    color: #333;
+    font-weight: 550;
     text-align: center;
 }
 
 .signin-link a {
-    color: #d9534f;
+    font-family: 'Noto Sans', sans-serif;
+    color: #a00500;
+    font-weight: bold;
     text-decoration: none;
 }
 
