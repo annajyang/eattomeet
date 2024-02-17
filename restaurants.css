@@ -18,7 +18,7 @@ body {
     padding: 0;
     height: 100vh;
     font-family: 'Noto Sans', sans-serif;
-    background: url("imgs/homebackground.svg") darkgray 60% / cover no-repeat;
+    background-color: #3A312B;
     background-position: center;
     background-size: cover;
 }
@@ -57,6 +57,46 @@ header {
     padding: 20px;
     background-color: rgba(0,0,0,0.5); /* Translucent navbar */
     color: white;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    -webkit-text-stroke-width: 4;
+    -webkit-text-stroke-color: #FFFEFE;
+    font-family: "Noto Sans";
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 5rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem;
+    position: relative;
+    top: -15vh;
+}
+  
+.location {
+    flex-basis: calc(33.33% - 1rem); /* Adjust as needed */
+    margin-bottom: 20px;
+}
+  
+.location img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+    width: 30rem;
+    height: auto;
 }
 
 .menu a {
