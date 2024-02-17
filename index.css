@@ -2,9 +2,8 @@
     align-items: stretch;
     justify-content: center;
     flex-grow: 1;
+    text-align: center;
 }
-
-
 
 .main-logo {
     color: #FFF;
@@ -16,4 +15,27 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.signup-button a {
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    -webkit-text-stroke-width: 4;
+    -webkit-text-stroke-color: #FFF;
+    font-family: "Noto Sans";
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.signup-button {
+    background-color: #CA3636;
+    border: none;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-radius: .7rem;
+    align-items: center;
+    width: 25rem;
+    position: relative;
+    top: -15vh;
 }
