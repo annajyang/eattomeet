@@ -66,9 +66,9 @@ body {
 }
 
 .logo {
-    font-family: "Yuji Syuku", sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: x-large;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 header {
@@ -91,7 +91,7 @@ header {
 }
 
 .navbar {
-    font-family: "Yuji Syuku";
+    font-family: 'Noto Sans', sans-serif;
     font-weight: bold; /* 700 is also commonly used for bold */
     display: flex;
     justify-content: space-between;
