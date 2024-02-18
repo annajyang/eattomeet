@@ -13,14 +13,26 @@
     overflow-x: scroll;
 }
 
-body {
-    margin: 0; /* Reset default margin */
+body, html {
+    margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    background-color: #3E342D;
+    font-family: "Noto Sans";
+}
+  
+.background {
     height: 100vh;
-    font-family: 'Noto Sans', sans-serif;
-    background: url("imgs/homebackground.svg") lightgray 50% / cover no-repeat;
-    background-position: center;
+    width: 100%;
+    background-image: linear-gradient(to bottom, transparent 30%, #3E342D 100%), url('imgs/homebackground.svg');
     background-size: cover;
+    background-position: center;
+}
+  
+main {
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
 }
 
 .home-main-section {
@@ -28,6 +40,11 @@ body {
     justify-content: center;
     flex-grow: 1;
     text-align: center;
+}
+
+.header {
+    font-size: 6rem;
+    color: white;
 }
 
 .main-logo {
@@ -71,15 +88,6 @@ body {
     font-weight: bold;
 }
 
-header {
-    background: #907A6B;
-    mix-blend-mode: plus-darker;
-    color: inherit;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
 .brand-logo {
     display: flex;
     align-items: center;
@@ -99,6 +107,7 @@ header {
     padding: 20px;
     background-color: rgba(0,0,0,0.5); /* Translucent navbar */
     color: white;
+    z-index: 1000;
 }
 
 .menu a {
@@ -121,27 +130,36 @@ header {
     padding: 0 40px;
 }
 
-.about-section {
+.spacer {
+    height: 5rem;
+}
+
+.container {
+    padding-top: 1rem;
+    width: 90%;
+    display: flex;
     text-align: center;
-    background-color: #333; /* Or any other color you prefer */
-    color: #fff;
-    padding: 20px;
+    align-items: center;
+    margin-bottom: 3rem;
 }
 
-.about-content .about-item {
-    margin: 20px 0;
+.container img {
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
 }
 
-.about-item h3 {
-    font-weight: bold;
-    color: #E67E22; /* Or any other accent color you prefer */
+.gallery {
+    display: flex;
 }
-
-.about-item p {
-    font-size: 1rem; /* Adjust size as needed */
-    line-height: 1.6; /* For better readability */
+  
+.image {
+    flex: 1; 
+    margin: 0 0.5rem;
 }
-
-/* .about-images {
-    /* Styling for the images, if they are to be included */
-} */
+  
+.image img {
+    width: 100%;
+    height: auto;
+}
+  
