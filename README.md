@@ -1,2 +1,1 @@
-# eattomeet
-# test
+# This is the code for EATtoMEET, our project for Treehacks24
