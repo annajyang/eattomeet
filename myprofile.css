@@ -1,0 +1,92 @@
+@font-face{
+    font-family: 'Noto Sans';
+    src:url("fonts/NotoSans-VariableFont_wdth,wght.ttf");
+}
+@font-face{
+    font-family: 'Yuji Syuku';
+    src:url("fonts/YujiSyuku-Regular.ttf");
+}
+
+*,  *::before,  *::after {
+    box-sizing: content-box;
+    max-width:100%;
+    overflow-x: scroll;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #3A312B;
+    background-position: center;
+    background-size: cover;
+}
+
+.profile-container {
+    color: white;
+}
+
+.title {
+    color: #FFF;
+    font-family: "Noto Sans";
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 3rem;
+}
+
+.logo {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+header {
+    background: #907A6B;
+    mix-blend-mode: plus-darker;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.25em;
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.navbar {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold; /* 700 is also commonly used for bold */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5); /* Translucent navbar */
+    color: white;
+}
+
+.menu a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.profile-container {
+    height: auto;
+    overflow: hidden;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.inline-element {
+    display: inline;
+    vertical-align: middle; /* Center vertically */
+}
