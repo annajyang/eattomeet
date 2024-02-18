@@ -17,7 +17,7 @@
 </div>
 
 <div class="form-container">
-    <form action="/restaurants.html" method="POST">
+    <form action="restaurants.html" method="GET">
         <h2>SIGN UP</h2>
         <input type="text" id="preferred_name" name="preferred_name" placeholder="PREFERRED NAME">
         
@@ -34,4 +34,23 @@
     <p class="signin-link">ALREADY HAVE AN ACCOUNT? <a href="#">CLICK HERE!</a></p>
 </div>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const inputs = document.querySelectorAll('.form-container input');
+      inputs.forEach((input, index) => {
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault(); // Prevent form submission
+            if (index < inputs.length - 1) {
+              inputs[index + 1].focus(); // Move focus to the next input field
+            } else {
+              inputs[0].focus(); // Optional: Move focus to the first input field if it's the last input
+            }
+          }
+        });
+      });
+    });
+    </script>
+
 </html>
