@@ -17,35 +17,61 @@
     </div>
     <div class="profile-container">
         <div class="top-container">
-            <img src="imgs/mypfp.svg" alt="your profile picture placeholder" class="inline-element">
-            <div style="display:inLine; white-space: nowrap;" class="inline-element">
+            <div class="image-container">
+                <img src="imgs/mypfp.svg" alt="your profile picture placeholder" class="img">
+            </div>
+            <div class="text-container">
                 <span class="title" id="preferred_name"></span><br>
                 <span class="profile-label">Age:</span>
                 <span class="profile-value" id="age"></span>
             </div>
         </div>
-        <div class="profile-item">
-          <span class="profile-label">Age:</span>
-          <span class="profile-value" id="age"></span>
-        </div>
     
-        <div class="profile-item">
-          <span class="profile-label">Zip Code:</span>
-          <span class="profile-value" id="zip_code"></span>
+        <div class="gallery">
+            <div class="profile-card">
+                <div class="profile-icon">
+                  <img src="imgs/locationicon.svg" alt="Location Icon">
+                </div>
+                <div>
+                  <h2>Location</h2>
+                  <span class="content" id="zip_code"></span>
+                </div>
+            </div>
+            <div class="profile-card">
+                <div class="profile-icon">
+                  <img src="imgs/meetsicon.svg" alt="Meets Icon">
+                </div>
+                <div>
+                  <h2>Meets</h2>
+                  <div class="content">0</div>
+                </div>
+            </div>
+            <div class="profile-card">
+                <div class="profile-icon">
+                  <img src="imgs/yearsicon.svg" alt="Calendar Icon">
+                </div>
+                <div>
+                  <h2>Year Joined</h2>
+                  <div class="content">2024</div>
+                </div>
+            </div>
+            <div class="profile-card">
+                <div class="profile-icon">
+                  <img src="imgs/interestsicon.svg" alt="interests Icon">
+                </div>
+                <div>
+                  <h2>Interests</h2>
+                  <span class="content" id="interests"></span>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <button>
+        <a href="restaurants.html">YOUR RESTAURANTS</a>
+    </button>
     
-        <div class="profile-item">
-          <span class="profile-label">Food Preferences:</span>
-          <span class="profile-value" id="food_preferences"></span>
-        </div>
-    
-        <div class="profile-item">
-          <span class="profile-label">Interests:</span>
-          <span class="profile-value" id="interests"></span>
-        </div>
-      </div>
-    
-      <script>
+    <script>
         // Parse query parameters
         const queryParams = new URLSearchParams(window.location.search);
     
@@ -53,15 +79,13 @@
         const name = queryParams.get('preferred_name');
         const age = queryParams.get('age');
         const zip_code = queryParams.get('zip_code');
-        const food_preferences = queryParams.get('food_preferences');
         const interests = queryParams.get('interests');
     
         // Update profile data on the page
         document.getElementById('preferred_name').textContent = name;
         document.getElementById('age').textContent = age;
         document.getElementById('zip_code').textContent = zip_code;
-        document.getElementById('food_preferences').textContent = food_preferences;
         document.getElementById('interests').textContent = interests;
-      </script>
+    </script>
 </body>
 </html>

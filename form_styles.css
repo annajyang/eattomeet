@@ -43,7 +43,7 @@ body {
 }
 
 .navbar {
-    font-family: "Yuji Syuku";
+    font-family: "Noto Sans";
     font-weight: bold; /* 700 is also commonly used for bold */
     display: flex;
     justify-content: space-between;
@@ -77,7 +77,7 @@ form input:hover {
 }
 
 .logo {
-    font-family: "Yuji Syuku";
+    font-family: "Noto Sans";
     font-size: x-large;
     font-weight: bolder; /* 700 is also commonly used for bold */
 }
@@ -89,14 +89,14 @@ form button {
     border: none;
     border-radius: 4px;
     background-color: #a00500;
-    font-family: "Yuji Syuku";
+    font-family: "Noto Sans";
     font-weight: bold;
     color: white;
     cursor: pointer;
 }
 
 form button:hover {
-    font-family: "Yuji Syuku";
+    font-family: "Noto Sans";
     font-weight: bold;
     background-color: #c20600;
 }
