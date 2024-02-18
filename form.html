@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EATtoMEET Sign Up Form</title>
-<link rel="stylesheet" href="form_styles.css">
+    <link rel="stylesheet" href="form_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <style>
+        #modal {
+            width: 30vw;
+            max-width: 200px; /* Maximum width */
+            height: 13vw; /* Height adjusts to content */
+            max-height: 30vh; /* Maximum height */
+            padding: 5px;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: bold;
+            color:#4b4b4bf5;
+            text-align: center;
+        
+        }
+
+        .modal-button {
+        font-family: 'Noto Sans', sans-serif; /* Explicitly set for the button, in case it's used outside the modal */
+        font-weight: bold;
+        padding: 10px 30px; /* Gives the button a nicer, larger click area */
+        border: 20px; /* Removes the default border */
+        border-radius: 5px; /* Adds rounded corners to the button */
+        background-color: #acacacbb; /* Sets a background color */
+        color: white; /* Sets the text color to white */
+        cursor: pointer; /* Changes the mouse cursor to indicate it's clickable */
+        outline: none; /* Removes the outline to clean up the appearance */
+        margin-top: 5px; /* Adds some space between the text and the button */
+        }
+
+        .modal-button:hover {
+        background-color: #707070a5; /* Darkens the button on hover for a feedback effect */
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EATtoMEET Sign Up Form</title>
 </head>
 <body>
 <div class="navbar">
@@ -17,7 +50,7 @@
 </div>
 
 <div class="form-container">
-    <form action="restaurants.html" method="GET">
+    <form id="signupForm" action="/restaurants.html" method="GET">
         <h2>SIGN UP</h2>
         <input type="text" id="preferred_name" name="preferred_name" placeholder="PREFERRED NAME">
         
@@ -33,24 +66,60 @@
     </form>
     <p class="signin-link">ALREADY HAVE AN ACCOUNT? <a href="#">CLICK HERE!</a></p>
 </div>
+
+<div id="modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:white; padding:20px; border-radius:5px; box-shadow:0 0 10px rgba(0,0,0,0.5);">
+    <p>Please fill out all fields</p>
+    <button class="modal-button" onclick="document.getElementById('modal').style.display='none'">OK</button>
+</div>
+  
 </body>
 
 <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-      const inputs = document.querySelectorAll('.form-container input');
-      inputs.forEach((input, index) => {
-        input.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter') {
-            e.preventDefault(); // Prevent form submission
-            if (index < inputs.length - 1) {
-              inputs[index + 1].focus(); // Move focus to the next input field
-            } else {
-              inputs[0].focus(); // Optional: Move focus to the first input field if it's the last input
-            }
-          }
+    document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('signupForm');
+    const inputs = form.querySelectorAll('input[type="text"], input[type="number"]');
+    
+    function allFieldsFilled() {
+        return Array.from(inputs).every(input => input.value.trim() !== '');
+    }
+
+    function styleInputs() {
+        inputs.forEach(input => {
+        input.style.borderColor = input.value.trim() ? '' : 'darkred';
         });
-      });
+    }
+    
+    inputs.forEach((input, index) => {
+        input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            
+            if (index < inputs.length - 1) {
+            inputs[index + 1].focus();
+            } else {
+            if (!allFieldsFilled()) {
+                document.getElementById('modal').style.display = 'block';
+                styleInputs();
+            } else {
+                form.submit();
+            }
+            }
+        }
+        });
     });
-    </script>
+
+    form.addEventListener('submit', (e) => {
+        if (!allFieldsFilled()) {
+        e.preventDefault();
+        document.getElementById('modal').style.display = 'block';
+        styleInputs();
+        }
+    });
+    document.getElementById('modal').style.display = 'block';
+    });
+
+</script>
+    
+    
 
 </html>
