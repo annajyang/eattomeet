@@ -120,3 +120,28 @@ header {
     margin: 0 auto;
     padding: 0 40px;
 }
+
+.about-section {
+    text-align: center;
+    background-color: #333; /* Or any other color you prefer */
+    color: #fff;
+    padding: 20px;
+}
+
+.about-content .about-item {
+    margin: 20px 0;
+}
+
+.about-item h3 {
+    font-weight: bold;
+    color: #E67E22; /* Or any other accent color you prefer */
+}
+
+.about-item p {
+    font-size: 1rem; /* Adjust size as needed */
+    line-height: 1.6; /* For better readability */
+}
+
+/* .about-images {
+    /* Styling for the images, if they are to be included */
+} */
