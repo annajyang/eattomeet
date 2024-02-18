@@ -59,7 +59,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     messageContent.appendChild(senderName);
     messageContent.appendChild(messageText);
-    messageBubble.appendChild(profilePic);
+
+    if (sender === 'John Doe') {
+      // Create an anchor tag for the profile picture
+      var profileLink = document.createElement('a');
+      profileLink.href = 'johndoe.html';
+      // Append the profile picture to the anchor tag
+      profileLink.appendChild(profilePic);
+      messageBubble.appendChild(profileLink);
+    } else {
+      messageBubble.appendChild(profilePic);
+    }
+
     messageBubble.appendChild(messageContent);
 
     var chatMessages = document.getElementById('chatMessages');
@@ -73,5 +84,4 @@ document.addEventListener('DOMContentLoaded', () => {
     addReceivedMessage('Alan', 'Great, how are you?', 'imgs/alanicon.svg');
     addReceivedMessage('John Doe', 'When were you all born?', 'imgs/johnicon.svg');
     addReceivedMessage('Jane Smith', 'A long time ago! I still remember World War I!', 'imgs/janeicon.svg');
-
 });
