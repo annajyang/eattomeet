@@ -76,48 +76,48 @@
 </body>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('signupForm');
-    const inputs = form.querySelectorAll('input[type="text"], input[type="number"]');
-    
-    function allFieldsFilled() {
-        return Array.from(inputs).every(input => input.value.trim() !== '');
-    }
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('signupForm');
+  const inputs = form.querySelectorAll('input[type="text"], input[type="number"]');
+  
+  function allFieldsFilled() {
+    return Array.from(inputs).every(input => input.value.trim() !== '');
+  }
 
-    function styleInputs() {
-        inputs.forEach(input => {
-        input.style.borderColor = input.value.trim() ? '' : 'darkred';
-        });
-    }
-    
-    inputs.forEach((input, index) => {
-        input.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            
-            if (index < inputs.length - 1) {
-            inputs[index + 1].focus();
-            } else {
-            if (!allFieldsFilled()) {
-                document.getElementById('modal').style.display = 'block';
-                styleInputs();
-            } else {
-                form.submit();
-            }
-            }
-        }
-        });
+  function styleInputs() {
+    inputs.forEach(input => {
+      input.style.borderColor = input.value.trim() ? '' : 'darkred';
     });
-
-    form.addEventListener('submit', (e) => {
-        if (!allFieldsFilled()) {
+  }
+  
+  inputs.forEach((input, index) => {
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
         e.preventDefault();
-        document.getElementById('modal').style.display = 'block';
-        styleInputs();
+        
+        if (index < inputs.length - 1) {
+          inputs[index + 1].focus();
+        } else {
+          if (!allFieldsFilled()) {
+            document.getElementById('modal').style.display = 'block';
+            styleInputs();
+          } else {
+            form.submit();
+          }
         }
+      }
     });
-    document.getElementById('modal').style.display = 'block';
-    });
+  });
+
+  form.addEventListener('submit', (e) => {
+    if (!allFieldsFilled()) {
+      e.preventDefault();
+      document.getElementById('modal').style.display = 'block';
+      styleInputs();
+    }
+  });
+});
+
 
 </script>
     
