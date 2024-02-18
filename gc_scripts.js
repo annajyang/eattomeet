@@ -35,4 +35,43 @@ document.addEventListener('DOMContentLoaded', () => {
       input.value = '';
     }
   }
+
   
+  function addReceivedMessage(sender, text, imageUrl) {
+    var messageBubble = document.createElement('div');
+    messageBubble.className = 'message-bubble received-message';
+
+    var profilePic = document.createElement('img');
+    profilePic.className = 'profile-pic';
+    profilePic.src = imageUrl; // Set the source to the profile image URL
+    profilePic.alt = sender + "'s profile picture";
+
+    var messageContent = document.createElement('div');
+    messageContent.className = 'message-content';
+
+    var senderName = document.createElement('p');
+    senderName.className = 'sender-name';
+    senderName.textContent = sender;
+
+    var messageText = document.createElement('span');
+    messageText.className = 'message-text';
+    messageText.textContent = text;
+
+    messageContent.appendChild(senderName);
+    messageContent.appendChild(messageText);
+    messageBubble.appendChild(profilePic);
+    messageBubble.appendChild(messageContent);
+
+    var chatMessages = document.getElementById('chatMessages');
+    chatMessages.appendChild(messageBubble);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    addReceivedMessage('John Doe', 'Good morning, everyone!', 'imgs/johnicon.svg');
+    addReceivedMessage('Jane Smith', 'How are we all doing today?', 'imgs/janeicon.svg');
+    addReceivedMessage('Alan', 'Great, how are you?', 'imgs/alanicon.svg');
+    addReceivedMessage('John Doe', 'When were you all born?', 'imgs/johnicon.svg');
+    addReceivedMessage('Jane Smith', 'A long time ago! I still remember World War I!', 'imgs/janeicon.svg');
+
+});
