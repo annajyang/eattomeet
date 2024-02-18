@@ -84,6 +84,10 @@ header {
     padding: 1rem;
 }
 
+.container {
+    overflow: hidden;
+}
+
 .navbar {
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold; /* 700 is also commonly used for bold */
