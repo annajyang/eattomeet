@@ -199,3 +199,8 @@ body, html {
     object-fit: cover; /* Ensure the image covers the area */
     margin-right: 10px; /* Space between picture and message */
 }
+
+.back-button a {
+    text-decoration: none;
+    color: white;
+}
